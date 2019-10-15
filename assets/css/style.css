@@ -43,7 +43,7 @@ a:visited {
 }
 
 
-/*** Main content ***/
+/*** Main content all pages ***/
 .container {
     font-family: "Open Sans", "Roboto", "Lato", "Raleway", "Sans", "PT Sans";
     line-height: 130%;
@@ -85,6 +85,7 @@ h2 {
 form {
     position: relative;
     top: 20px;
+    padding-bottom: 20px;
 }
 input[type=text], input[type=email], textarea {
     width: 100%;
@@ -102,11 +103,6 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-label[for=name] {
-    position: relative;
-    left: -255px
 }
 
 #message {
@@ -149,7 +145,6 @@ label[for=name] {
     position: absolute;
     bottom: 15%;
     left: 5%
-    /* box-shadow: 5px 10px 10px #888888 */
 }
 
 /*** Footer section ***/
@@ -164,5 +159,38 @@ label[for=name] {
     font-size: 13px;
     background: #666;
     color: lightgrey;
-    text-align: center
+    text-align: center;
+}
+
+/* Media query for desktop display */
+@media screen and (min-width: 739px) {
+    #mobile {
+        display: none;
+    }
+}
+
+/* Media query for mobile display */
+@media screen and (max-width: 738px) {
+    .images {
+        width: 100%;
+    }
+    h1 {
+        float: none;
+        text-align: left;
+        position: relative;
+    }
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        position: absolute;
+        top: -5px;
+        right: 5%;
+    }
+    .icons {
+        padding: 0 3px 5px 3px;
+    }
+    .fas {
+        font-size: 120%;
+    }
 }
